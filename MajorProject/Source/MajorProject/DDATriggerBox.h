@@ -19,8 +19,7 @@ protected:
 
 	virtual void BeginPlay() override;
 
-	void SetDataChecks(int time = 0, int movement01 = 0, int movement02 = 0, int movement03 = 0, int movement04 = 0,
-					   int movement05 = 0, int inLight01 = 0, int inLight02 = 0, int inLight03 = 0, int inLight04 = 0);
+	void SetDataChecks(int inLight01 = 0, int inLight02 = 0, int inLight03 = 0, int inLight04 = 0);
 	void DifficultyFinializedSetup(ESections section);
 	void DifficultyShift(bool IsFirstTB = false);
 
@@ -31,27 +30,16 @@ public:
 	UFUNCTION()
 	void OnOverlapBegin(class AActor* OverlappedActor, class AActor* OtherActor);
 	
-	/*UFUNCTION()
-	void OnOverLapEnd(class AActor* OverlappedActor, class AActor* OtherActor);*/
-
 //########################################################################################################################
 							// LEVEL 01 SENTRIES
 //########################################################################################################################
 //#####################################################################################################
 							// SECTION 1 SENTRIES
 //#####################################################################################################
-	
-	// Array of type actor for the sentries to delete when in easy mode
-	UPROPERTY(EditAnywhere, Category = "Level 01 - Section 01 Trigger Box")
-	TArray<AActor*> m_L1S1EasyModeSetup;
 
 	// Array of type actor for the sentries to delete when in medium mode
 	UPROPERTY(EditAnywhere, Category = "Level 01 - Section 01 Trigger Box")
 	TArray<AActor*> m_L1S1MediumModeSetup;
-
-	// Array of type actor for the sentries to delete when in hard mode
-	UPROPERTY(EditAnywhere, Category = "Level 01 - Section 01 Trigger Box")
-	TArray<AActor*> m_L1S1HardModeSetup;
 
 //#####################################################################################################
 							// SECTION 2 SENTRIES
@@ -222,12 +210,6 @@ protected:
 
 	int m_intSeconds;
 
-	int m_timeChk;
-	int m_mvmntChk01;
-	int m_mvmntChk02;
-	int m_mvmntChk03;
-	int m_mvmntChk04;
-	int m_mvmntChk05;
 	int m_inLightChk01;
 	int m_inLightChk02;
 	int m_inLightChk03;
