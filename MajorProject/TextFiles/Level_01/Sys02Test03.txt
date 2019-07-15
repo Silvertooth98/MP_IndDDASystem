@@ -2,4 +2,4 @@ Level_01 - Section 03
 Difficulty Set to: MEDIUM_01
 Total Time: 16
 Total Movement Time: 15
-Total In Light Time: 3
+Total In Light Time: 2
